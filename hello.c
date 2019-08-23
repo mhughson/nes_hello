@@ -15,7 +15,7 @@ Finally, turn on the PPU to display video.
 void main(void) {
   
   int x;
-  
+
   // set palette colors
   pal_col(0,0x02);	// set screen to dark blue
   pal_col(1,0x14);	// fuchsia
@@ -29,12 +29,10 @@ void main(void) {
   // enable PPU rendering (turn on screen)
   ppu_on_all();
   
-  for(x=0;x<50;x++)
+  for (x = 0; x < 50; x++)
   {
     ppu_wait_frame();
   }
-  
-  ppu_off();
 
   // infinite loop
   while (1) ;
